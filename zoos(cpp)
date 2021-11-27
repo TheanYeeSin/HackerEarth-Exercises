@@ -1,0 +1,48 @@
+//first solution
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	string input;
+	cin >> input;
+	if (input.size() <= 20) {
+		int z, o;
+		z = int(count(input.begin(), input.end(), 'z'));
+		o = int(count(input.begin(), input.end(), 'o'));
+		cout << (2 * z == o ? "Yes" : "No");
+	}
+	else {
+		cout << "Wrong Input";
+	}
+	return 0;
+}
+
+//second solution (idk why the previous solution doesnt work in hackerearth compiler)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	string input;
+	cin >> input;
+	if (input.size() <= 20) {
+		int z = 0;
+		int	o = 0;
+		for (auto& ch : input) {
+			if (ch == 'z') {
+				z++;
+			}
+			else {
+				o++;
+			}
+		}
+		cout << (2 * z == o ? "Yes" : "No");
+		return 0;
+	}
+	else {
+		cout << "Wrong Input";
+	}
+}
