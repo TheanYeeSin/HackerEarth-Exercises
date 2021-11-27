@@ -1,0 +1,27 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/divisible-or-not-81b86ad7/
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int N = 0;
+    int lastNumber;
+    string ans;
+    cin>>N;
+    
+    long data[N];
+    for(int i=0; i<N; i++){
+        cin>>data[i];
+    }
+    lastNumber = data[N-1];
+    if(lastNumber%10==0){
+        ans="Yes";
+    }else{
+        ans="No";
+    }
+    cout<<ans;
+    
+    return 0;
+}
