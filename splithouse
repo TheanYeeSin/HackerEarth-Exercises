@@ -1,0 +1,25 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/split-house-547be0e9/
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int grids=1;
+	string village;
+	cin>>grids;
+	if(grids>=1 && grids <=20){
+		cin>>village;
+		for(auto &ch:village){
+		if(ch=='.'){
+			ch = 'B';
+			}
+		}
+		if(village.find("HH")!=string::npos){ //string::npos =-1 which mean not found
+			cout<<"NO";
+		}else{
+			cout<<"YES"<<endl<<village;
+		}
+		
+	}
+	return 0;
+}
