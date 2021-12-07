@@ -1,0 +1,51 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/
+
+#include <iostream>
+
+using namespace std;
+int main(){
+	int testCase;
+	int greenCost; 
+	int purpleCost;
+	int people;
+	int f,s;
+	int firstQuestion=0;
+	int secondQuestion=0;
+	int total=0;
+
+	cin>>testCase;
+	for(int i=0;i<testCase;i++){
+		cin>>greenCost>>purpleCost>>people;
+		firstQuestion=0;
+		secondQuestion=0;
+		for(int j = 0;j<people;j++){
+			cin>>f>>s;
+			if(f==1){
+				firstQuestion++;
+			}
+			if(s==1){
+				secondQuestion++;
+			}
+		}
+		if(greenCost<purpleCost){
+			if(firstQuestion>secondQuestion){
+				total =firstQuestion*greenCost + secondQuestion*purpleCost;
+			}
+			else{
+				total =firstQuestion*purpleCost + secondQuestion*greenCost;
+				}
+		}else{
+			if(firstQuestion>secondQuestion){
+				total =firstQuestion*purpleCost + secondQuestion*greenCost;
+			}
+			else{
+				total =firstQuestion*greenCost + secondQuestion*purpleCost;
+			}
+		}
+		cout<<total<<endl;
+	}
+	
+	
+	return 0;
+
+}
