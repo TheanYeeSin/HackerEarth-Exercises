@@ -1,4 +1,2 @@
-# HackerEarth-project
-just me doing some project to improve my programming skill
-
-literally, im trying to practise basic programming
+# HackerEarth-Exercise
+It's just me practicing my programming skill on HackerEarth
